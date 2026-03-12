@@ -2,7 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
 @custom-variant dark (&:is(.dark *));
+
 
 @theme inline {
   --color-background: var(--background);
@@ -48,6 +50,7 @@
 }
 
 :root {
+  --font-sans: "Satoshi", sans-serif;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -120,10 +123,19 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    font-family: "Satoshi", sans-serif;
+    /* 3. Apply Satoshi to body */
+    font-size: 16px;
+    /* 4. Default 16px */
+    color: #575757CC;
+    /* 5. Your default text color */
   }
+
   html {
     @apply font-sans;
+    font-size: 16px;
   }
 }
