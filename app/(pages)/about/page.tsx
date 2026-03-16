@@ -187,7 +187,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-3 gap-8 ">
 
-            <div className="bg-[#F5F5F5] border border-[#E4E4E4] h-80 w-90  p-8 rounded-2xl space-y-2">
+            <div className="bg-[#F5F5F5] border border-[#E4E4E4]  w-90  p-10 rounded-2xl space-y-2">
               <div>
                 <h2 className="text-[22px] text-[#000000] font-semibold">Mission-Driven</h2>
                 <p className="text-[16px] text-[#575757]">Empowering legal professionals with
@@ -199,10 +199,10 @@ export default function AboutPage() {
                 alt="pic1"
                 width={300}
                 height={200}
-              />
+               />
             </div>
 
-            <div className="bg-[#F5F5F5] border border-[#E4E4E4] h-80 w-90  p-8 rounded-2xl space-y-2">
+            <div className="bg-[#F5F5F5] border border-[#E4E4E4]  w-90  p-10 rounded-2xl space-y-2">
 
               <div>
                 <h2 className="text-[22px] text-[#000000] font-semibold" >Client-Centric</h2>
@@ -218,7 +218,7 @@ export default function AboutPage() {
               />
             </div>
 
-            <div className="bg-[#F5F5F5] border border-[#E4E4E4] h-80 w-90  p-8 rounded-2xl">
+            <div className="bg-[#F5F5F5] border border-[#E4E4E4]  w-90  p-10 rounded-2xl  space-y-2">
 
               <div>
                 <h2 className="text-[22px] text-[#000000] font-semibold">Built for Real Legal Work</h2>
@@ -237,9 +237,9 @@ export default function AboutPage() {
 
 
 
-          <div className="grid grid-cols-2 gap-4 p-3">
+          <div className="grid grid-cols-2 gap-6 p-5">
 
-            <div className="flex flex-col-2 gap-2 bg-[#F5F5F5] border border-[#E4E4E4] h-70 w-120  p-8 rounded-2xl">
+            <div className="flex flex-col-2 gap-2 bg-[#F5F5F5] border border-[#E4E4E4]  p-4 rounded-2xl">
               <div>
                 <h2 className="text-[22px] text-[#000000] font-semibold">Context Over Guesswork</h2>
                 <p className="text-[16px] text-[#575757]">
@@ -249,11 +249,11 @@ export default function AboutPage() {
                 src="/img4.avif"
                 alt="pic4"
                 width={250}
-                height={80}
+                height={150}
               />
             </div>
 
-            <div className="flex flex-col-2 gap-2 bg-[#F5F5F5] border border-[#E4E4E4] h-70 w-120  p-8 rounded-2xl">
+            <div className="flex flex-cols-2 gap-2 bg-[#F5F5F5] border border-[#E4E4E4]  p-4 rounded-2xl">
               <div>
                 <h2 className="text-[22px] text-[#000000] font-semibold">Growth Through Clarity</h2>
                 <p className="text-[16px] text-[#575757]">
@@ -263,7 +263,7 @@ export default function AboutPage() {
                 src="/img5.avif"
                 alt="pic5"
                 width={250}
-                height={80}
+                height={150}
               />
             </div>
 
