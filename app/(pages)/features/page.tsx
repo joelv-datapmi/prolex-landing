@@ -1,8 +1,20 @@
+import { FeaturesHero } from "@/components/sections/features/FeaturesHero"
+import { FeaturesGrid } from "@/components/sections/features/FeaturesGrid"
+import { AISection } from "@/components/sections/features/AISection"
+import { FeaturesCTA } from "@/components/sections/features/FeaturesCTA"
+
+export const metadata = {
+    title: "Features | Prolex.AI",
+    description: "Features built for legal excellence.",
+}
+
 export default function FeaturesPage() {
     return (
-        <div className="container mx-auto px-6 py-24 text-center">
-            <h1 className="text-4xl font-bold text-[#1a237e] mb-4">Features</h1>
-            <p className="text-gray-600">This page is under construction.</p>
-        </div>
+        <main>
+            <FeaturesHero />
+            <FeaturesGrid />
+            <AISection />
+            <FeaturesCTA />
+        </main>
     )
 }
