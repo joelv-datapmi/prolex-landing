@@ -39,12 +39,12 @@ export function BuiltForModern() {
                         <div className="inline-flex items-center bg-gray-100 border border-gray-200 rounded-full px-4 py-1.5 mb-6">
                             <span className="text-xs text-gray-500 font-medium">Why AI?</span>
                         </div>
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                             Built for modern
                             <br />
                             legal practice
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-[16px] text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
                             Whether you're a solo practitioner or a large enterprise firm, Prolex.ai
                             adapts to your practice and workflow.
                         </p>
@@ -57,8 +57,8 @@ export function BuiltForModern() {
                         <ScrollReveal key={item.title} delay={i * 0.1}>
                             <div className="rounded-2xl border border-gray-100 bg-[#f7f7f8] overflow-hidden flex flex-col">
                                 <div className="p-6 text-center flex-1">
-                                    <h3 className="font-bold text-gray-900 text-[24px] mb-2 leading-tight">{item.title}</h3>
-                                    <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
+                                    <h3 className="font-jakarta text-gray-900 text-[24px] mb-2 leading-tight">{item.title}</h3>
+                                    <p className="text-[16px] text-gray-500 leading-relaxed">{item.description}</p>
                                 </div>
 
                                 <div className="flex justify-center px-4 pb-4">

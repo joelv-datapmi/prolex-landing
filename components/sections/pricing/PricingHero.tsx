@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { m } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { RequestDemoButton } from "@/components/shared/RequestDemoButton"
+
 
 export function PricingHero() {
     return (
@@ -13,21 +15,21 @@ export function PricingHero() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="max-w-2xl mx-auto"
             >
-                <h1 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-5">
+                <h1 className="text-[48px] font-jakarta text-gray-900 leading-tight tracking-tight mb-5">
                     Flexible <span className="text-[#1a237e]">Plans</span> for Every
                     <br />
                     Legal Practice
                 </h1>
-                <p className="text-sm text-gray-500 mb-10">
+                <p className="text-[16px] text-gray-500 mb-10">
                     Automate support and boost customer experience effortlessly.
                 </p>
                 <div className="flex items-center justify-center gap-3">
-                    <Button className="bg-[#1a237e] hover:bg-[#151c6b] text-white font-medium px-6" asChild>
-                        <Link href="/demo">Request Demo</Link>
-                    </Button>
+                    <RequestDemoButton className="bg-[#1a237e] hover:bg-[#151c6b] text-white font-medium px-6" />
+
                     <Button variant="outline" className="border-gray-300 text-gray-700 font-medium px-6" asChild>
-                        <Link href="/login">Sign In</Link>
+                        <a href="https://app.prolex.ai/login">Sign In</a>
                     </Button>
+
                 </div>
             </m.div>
         </section>

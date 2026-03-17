@@ -13,13 +13,13 @@ export function RealWorkflows() {
                         </span>
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                    <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                         Built for Real
                         <br />
                         Legal Workflows
                     </h2>
 
-                    <p className="text-sm text-gray-500 mt-5 max-w-xs mx-auto leading-relaxed">
+                    <p className="text-[16px] text-gray-500 mt-5 max-w-xs mx-auto leading-relaxed">
                         Prolex adapts to how legal professionals actually work — structured,
                         deadline-driven, and compliance-sensitive.
                     </p>

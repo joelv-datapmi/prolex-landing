@@ -132,7 +132,7 @@
 }
 
 .animate-infinite-scroll {
-  animation: infinite-scroll 20s linear infinite;
+  animation: infinite-scroll 30s linear infinite;
 }
 
 .animate-infinite-scroll:hover {
@@ -142,20 +142,20 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-weight: 500;
   }
 
   body {
     @apply bg-background text-foreground;
     font-family: "Satoshi", sans-serif;
-    /* 3. Apply Satoshi to body */
+    font-weight: 500;
     font-size: 16px;
-    /* 4. Default 16px */
     color: #575757CC;
-    /* 5. Your default text color */
   }
 
   html {
     @apply font-sans;
+    font-weight: 500;
     font-size: 16px;
   }
 }

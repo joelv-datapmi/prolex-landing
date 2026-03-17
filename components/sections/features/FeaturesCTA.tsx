@@ -4,6 +4,8 @@ import Link from "next/link"
 import { m } from "framer-motion"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 import { Button } from "@/components/ui/button"
+import { RequestDemoButton } from "@/components/shared/RequestDemoButton"
+
 
 export function FeaturesCTA() {
     return (
@@ -28,12 +30,10 @@ export function FeaturesCTA() {
                         <p className="text-blue-200 text-sm mb-8">
                             Experience the power of AI-driven legal case management with Prolex.
                         </p>
-                        <Button
-                            className="bg-white text-[#1a237e] hover:bg-gray-100 font-semibold px-8"
-                            asChild
-                        >
-                            <Link href="/demo">Book a Demo</Link>
-                        </Button>
+                        <RequestDemoButton className="bg-white text-[#1a237e] hover:bg-gray-100 font-semibold px-8">
+                            Book a Demo
+                        </RequestDemoButton>
+
                     </div>
 
                 </div>

@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { m } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { RequestDemoButton } from "@/components/shared/RequestDemoButton"
+
 
 export function SolutionsHero() {
     return (
@@ -13,23 +15,21 @@ export function SolutionsHero() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="max-w-3xl mx-auto"
             >
-                <h1 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
+                <h1 className="font-jakarta text-[60px] text-gray-900 leading-tight tracking-tight mb-6">
                     CRM <span className="text-[#1a237e]">Solutions</span> Built
                     <br />
                     For Legal Excellence
                 </h1>
 
-                <p className="text-gray-500 text-sm leading-relaxed max-w-sm mx-auto mb-10">
+                <p className="text-gray-500 text-[16px] leading-relaxed max-w-sm mx-auto mb-10">
                     Designed for modern legal professionals who need structure, intelligence, and compliance.
                 </p>
 
                 <div className="flex items-center justify-center gap-3">
-                    <Button
+                    <RequestDemoButton
                         className="bg-[#1a237e] hover:bg-[#151c6b] text-white font-medium px-6"
-                        asChild
-                    >
-                        <Link href="/demo">Request Demo</Link>
-                    </Button>
+                    />
+
                     <Button
                         variant="outline"
                         className="border-gray-300 text-gray-700 font-medium px-6"

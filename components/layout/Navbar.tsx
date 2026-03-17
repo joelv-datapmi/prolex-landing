@@ -2,12 +2,17 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { m } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { RequestDemoButton } from "@/components/shared/RequestDemoButton"
+
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
+
+
 
 const navLinks = [
     { label: "Prolex Features", href: "/features" },
@@ -20,6 +25,7 @@ export function Navbar() {
     const pathname = usePathname()
     const [scrolled, setScrolled] = useState(false)
     const [open, setOpen] = useState(false)
+
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -44,22 +50,15 @@ export function Navbar() {
 
                 {/* LEFT — Logo */}
                 <div className="flex items-center">
-                    <Link href="/" className="flex items-center gap-2">
-                        {/* Replace with your actual SVG icon */}
-                        <svg
-                            className="h-6 w-6 text-[#1a237e]"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                        >
-                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            <path d="M2 17l10 5 10-5" />
-                            <path d="M2 12l10 5 10-5" />
-                        </svg>
-                        <span className="font-bold text-[#1a237e] text-base tracking-wide uppercase">
-                            Prolex.AI
-                        </span>
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/logo/logo-letter.avif"
+                            alt="Prolex.AI"
+                            width={130}
+                            height={32}
+                            priority
+                            className="h-8 w-auto object-contain"
+                        />
                     </Link>
                 </div>
 
@@ -70,7 +69,7 @@ export function Navbar() {
                             key={link.href}
                             href={link.href}
                             className={cn(
-                                "relative px-4 py-2 text-sm transition-colors rounded-md",
+                                "relative px-4 py-2 text-[16px] transition-colors rounded-md",
                                 pathname === link.href
                                     ? "text-[#1a237e] font-medium"
                                     : "text-gray-500 hover:text-gray-900"
@@ -94,19 +93,19 @@ export function Navbar() {
                     <Button
                         variant="ghost"
                         size="sm"
-                        className="text-gray-600 hover:text-gray-900 font-normal"
+                        className="text-gray-600 hover:text-gray-900 font-normal text-[16px]"
                         asChild
                     >
-                        <Link href="/login">Sign In</Link>
+                        <a href="https://app.prolex.ai/login">Sign In</a>
                     </Button>
 
-                    <Button
+
+                    <RequestDemoButton
                         size="sm"
-                        className="bg-[#1a237e] hover:bg-[#151c6b] text-white font-medium px-5 rounded-md"
-                        asChild
-                    >
-                        <Link href="/demo">Request Demo</Link>
-                    </Button>
+                        className="bg-[#1a237e] hover:bg-[#151c6b] text-white font-medium px-5 rounded-md text-[16px]"
+                    />
+
+
                 </div>
 
                 {/* MOBILE — Hamburger */}
@@ -118,21 +117,14 @@ export function Navbar() {
                             </Button>
                         </SheetTrigger>
                         <SheetContent side="right" className="w-72">
-                            <div className="flex items-center gap-2 mb-8 mt-2">
-                                <svg
-                                    className="h-5 w-5 text-[#1a237e]"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth={2}
-                                >
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                    <path d="M2 17l10 5 10-5" />
-                                    <path d="M2 12l10 5 10-5" />
-                                </svg>
-                                <span className="font-bold text-[#1a237e] uppercase tracking-wide">
-                                    Prolex.AI
-                                </span>
+                            <div className="mb-8 mt-2">
+                                <Image
+                                    src="/logo/logo-letter.avif"
+                                    alt="Prolex.AI"
+                                    width={120}
+                                    height={28}
+                                    className="h-7 w-auto object-contain"
+                                />
                             </div>
 
                             <nav className="flex flex-col gap-1">
@@ -142,7 +134,7 @@ export function Navbar() {
                                         href={link.href}
                                         onClick={() => setOpen(false)}
                                         className={cn(
-                                            "px-4 py-3 rounded-md text-sm transition-colors",
+                                            "px-4 py-3 rounded-md text-[16px] transition-colors",
                                             pathname === link.href
                                                 ? "bg-blue-50 text-[#1a237e] font-medium"
                                                 : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
@@ -155,18 +147,17 @@ export function Navbar() {
 
                             <div className="border-t mt-4 pt-4 flex flex-col gap-2">
                                 <Button variant="ghost" asChild>
-                                    <Link href="/login" onClick={() => setOpen(false)}>
+                                    <a href="https://app.prolex.ai/login" onClick={() => setOpen(false)}>
                                         Sign In
-                                    </Link>
+                                    </a>
                                 </Button>
-                                <Button
+
+                                <RequestDemoButton
                                     className="bg-[#1a237e] hover:bg-[#151c6b] text-white"
-                                    asChild
-                                >
-                                    <Link href="/demo" onClick={() => setOpen(false)}>
-                                        Request Demo
-                                    </Link>
-                                </Button>
+                                    onClick={() => setOpen(false)}
+                                />
+
+
                             </div>
                         </SheetContent>
                     </Sheet>
@@ -174,5 +165,7 @@ export function Navbar() {
 
             </div>
         </m.header>
+
+
     )
 }

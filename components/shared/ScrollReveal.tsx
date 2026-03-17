@@ -6,9 +6,11 @@ import { m, useInView } from "framer-motion"
 export function ScrollReveal({
     children,
     delay = 0,
+    className,
 }: {
     children: React.ReactNode
     delay?: number
+    className?: string
 }) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-8%" })
@@ -19,6 +21,7 @@ export function ScrollReveal({
             initial={{ opacity: 0, y: 32 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
+            className={className}
         >
             {children}
         </m.div>

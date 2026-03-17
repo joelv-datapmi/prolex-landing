@@ -8,7 +8,7 @@ interface FeatureImageCardProps {
 
 export function FeatureImageCard({ frontImage, alt = "Feature Card" }: FeatureImageCardProps) {
     return (
-        <div className="relative flex items-center w-full max-w-md mx-auto mt-auto pt-6">
+        <div className="relative flex items-center w-full mx-auto mt-auto pt-10">
             {/* Back image — background pattern */}
             <div className="w-full relative z-0">
                 <Image src={backgroundImage} alt="Background" className="w-full" />

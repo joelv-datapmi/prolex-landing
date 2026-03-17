@@ -36,7 +36,7 @@ export function PricingTable() {
         <section className="bg-white py-24 px-6">
             <div className="max-w-4xl mx-auto">
                 <ScrollReveal>
-                    <h2 className="text-3xl font-black text-gray-900 text-center mb-12">
+                    <h2 className="text-[48px] font-jakarta text-gray-900 text-center mb-12">
                         Membership pricing
                     </h2>
                 </ScrollReveal>
@@ -50,7 +50,7 @@ export function PricingTable() {
                                         <th
                                             key={col}
                                             className={cn(
-                                                "pb-4 text-left text-sm font-semibold text-gray-900 border-b border-gray-200",
+                                                "pb-4 text-left text-[24px] font-jakarta text-gray-900 border-b border-gray-200",
                                                 i > 0 && "text-center"
                                             )}
                                         >
@@ -65,7 +65,7 @@ export function PricingTable() {
                                         key={`${row.feature}-${i}`}
                                         className="border-b border-gray-100 hover:bg-gray-50 transition-colors"
                                     >
-                                        <td className="py-4 text-sm text-gray-600">{row.feature}</td>
+                                        <td className="py-4 text-[20px] font-jakarta text-gray-600">{row.feature}</td>
                                         {row.values.map((val, j) => (
                                             <td key={j} className="py-4 text-center">
                                                 <Cell value={val} />

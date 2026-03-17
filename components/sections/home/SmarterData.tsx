@@ -27,19 +27,21 @@ function CountUp({ target, suffix, decimals = 0 }: { target: number; suffix: str
 }
 
 const otherTools = [
-    "Scattered across multiple tools",
-    "No case-aware AI context",
-    "Manual deadline tracking",
-    "No audit trail",
-    "Difficult access control",
+    "Generic AI tools without legal context",
+    "No case metadata integration",
+    "No hearing or court structure",
+    "Limited or no governance controls",
+    "No AI usage tracking",
+    "Risk of fabricated legal citations",
 ]
 
 const prolexFeatures = [
-    "Unified legal workspace",
-    "Context-aware AI built-in",
-    "Smart automated reminders",
-    "Full compliance audit trail",
-    "Granular role-based access",
+    "Context-aware drafting using case data",
+    "Integrated case lifecycle tracking",
+    "Hearing & deadline automation",
+    "Limited or no governance controls",
+    "Real-time AI usage limits & Drafting",
+    "Conservative citation safeguards",
 ]
 
 const stats = [
@@ -55,12 +57,12 @@ export function SmarterData() {
 
                 <ScrollReveal>
                     <div className="text-center mb-14">
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="font-jakarta text-[48px] text-gray-900 leading-tight">
                             A smarter way to
                             <br />grow with data
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-xs mx-auto">
-                            See how Prolex compares to a fragmented legal tool stack.
+                        <p className="text-[16px] text-gray-500 mt-4 max-w-xs mx-auto">
+                            Not just another legal CRM. A Human-Guided Legal Operating System.
                         </p>
                     </div>
                 </ScrollReveal>
@@ -78,7 +80,7 @@ export function SmarterData() {
                                         <span className="mt-0.5 w-4 h-4 rounded-full border border-gray-300 flex items-center justify-center shrink-0">
                                             <span className="w-1.5 h-0.5 bg-gray-300 rounded" />
                                         </span>
-                                        <span className="text-xs text-gray-400 line-through">{t}</span>
+                                        <span className="text-[16px] text-gray-400 line-through">{t}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -91,7 +93,7 @@ export function SmarterData() {
                                 {prolexFeatures.map((f) => (
                                     <li key={f} className="flex items-start gap-2">
                                         <Check className="h-4 w-4 text-[#1a237e] mt-0.5 shrink-0" />
-                                        <span className="text-xs text-gray-700 font-medium">{f}</span>
+                                        <span className="text-[16px] text-gray-700 font-medium">{f}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -104,10 +106,10 @@ export function SmarterData() {
                     {stats.map((s, i) => (
                         <ScrollReveal key={s.label} delay={i * 0.1}>
                             <div className="text-center">
-                                <div className="text-4xl font-black text-gray-900">
+                                <div className="text-[64px] font-jakarta text-gray-900">
                                     <CountUp target={s.target} suffix={s.suffix} decimals={s.decimals} />
                                 </div>
-                                <p className="text-xs text-gray-400 mt-1">{s.label}</p>
+                                <p className="text-[16px] text-gray-400">{s.label}</p>
                             </div>
                         </ScrollReveal>
                     ))}

@@ -39,10 +39,12 @@ export function WorkflowCards() {
                     {/* LEFT — Static label */}
                     <ScrollReveal>
                         <div className="pt-4">
-                            <p className="text-xs text-gray-400 uppercase tracking-widest mb-3">
-                                Why Prolex Differ from others
-                            </p>
-                            <h3 className="text-2xl font-black text-gray-900 leading-snug">
+                            <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-5 shadow-sm">
+                                <span className="text-xs text-gray-500 font-medium uppercase tracking-wider">
+                                    Why Prolex Differ from others
+                                </span>
+                            </div>
+                            <h3 className="text-[32px] font-jakarta text-gray-900 leading-snug">
                                 From Setup To Insight — Just
                                 <br />
                                 Three Simple Steps.
@@ -55,10 +57,10 @@ export function WorkflowCards() {
                         {workflowCards.map((card, i) => (
                             <ScrollReveal key={card.title} delay={i * 0.1}>
                                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-                                    <h4 className={`font-bold text-gray-900 mb-2 ${card.isWide ? "text-base leading-snug" : "text-sm"}`}>
+                                    <h4 className={`font-jakarta text-[32px] text-gray-900 mb-2 ${card.isWide ? "text-base leading-snug" : "text-sm"}`}>
                                         {card.title}
                                     </h4>
-                                    <p className="text-xs text-gray-500 leading-relaxed mb-5">
+                                    <p className="text-[16px] text-gray-500 leading-relaxed mb-5">
                                         {card.description}
                                     </p>
 

@@ -34,12 +34,12 @@ export function AboutMission() {
 
                 {/* Text */}
                 <ScrollReveal delay={0.15}>
-                    <h2 className="font-jakarta text-2xl font-black text-gray-900 leading-snug mb-4">
+                    <h2 className="font-jakarta text-[24px] text-gray-900 leading-snug mb-4">
                         Transforming Legal Practice
                         <br />Management with AI-Powered
                         <br />Innovation
                     </h2>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                    <p className="text-[16px] text-gray-500 leading-relaxed mb-6">
                         Prolex.ai was created to modernize legal operations without compromising professional
                         judgment. We believe that technology should reduce friction, not replace expertise. In a
                         profession where accuracy, confidentiality, and accountability define success, we built
@@ -50,7 +50,7 @@ export function AboutMission() {
                         {bullets.map((b) => (
                             <li key={b} className="flex items-start gap-2.5">
                                 <Check className="h-4 w-4 text-[#1a237e] mt-0.5 shrink-0" />
-                                <span className="text-sm text-gray-700">{b}</span>
+                                <span className="text-[18] font-jakarta text-gray-700">{b}</span>
                             </li>
                         ))}
                     </ul>

@@ -163,14 +163,14 @@ export function PricingCards() {
                 <ScrollReveal>
                     <div className="text-center mb-10">
                         <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-5 shadow-sm">
-                            <span className="text-xs text-gray-500 font-medium">Our Pricing</span>
+                            <span className="text-[14px] text-gray-500 font-medium">Our Pricing</span>
                         </div>
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                             Simple,
                             <br />
                             Transparent Pricing
                         </h2>
-                        <p className="text-sm text-gray-500 mt-3 max-w-xs mx-auto">
+                        <p className="text-[16px] text-gray-500 mt-3 max-w-xs mx-auto">
                             Choose the plan that fits your practice. Start free, scale as you grow.
                         </p>
                     </div>
@@ -179,7 +179,7 @@ export function PricingCards() {
                 {/* Monthly / Yearly toggle */}
                 <ScrollReveal delay={0.1}>
                     <div className="flex items-center justify-center gap-4 mb-3">
-                        <span className={cn("text-sm font-medium", billing === "monthly" ? "text-gray-900" : "text-gray-400")}>
+                        <span className={cn("text-[18px] font-jakarta", billing === "monthly" ? "text-gray-900" : "text-gray-400")}>
                             Monthly
                         </span>
 
@@ -187,7 +187,7 @@ export function PricingCards() {
                         <button
                             onClick={() => setBilling(b => b === "monthly" ? "yearly" : "monthly")}
                             className={cn(
-                                "relative w-12 h-6 rounded-full transition-colors duration-300",
+                                "relative w-[80px] h-[40px] rounded-full transition-colors duration-300",
                                 billing === "yearly" ? "bg-[#1a237e]" : "bg-gray-300"
                             )}
                         >
@@ -195,13 +195,13 @@ export function PricingCards() {
                                 layout
                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                 className={cn(
-                                    "absolute top-1 w-4 h-4 rounded-full bg-white shadow",
-                                    billing === "yearly" ? "left-7" : "left-1"
+                                    "absolute top-[6px] w-[28px] h-[28px] rounded-full bg-white shadow",
+                                    billing === "yearly" ? "left-[46px]" : "left-[6px]"
                                 )}
                             />
                         </button>
 
-                        <span className={cn("text-sm font-medium", billing === "yearly" ? "text-gray-900" : "text-gray-400")}>
+                        <span className={cn("text-[18px] font-jakarta", billing === "yearly" ? "text-gray-900" : "text-gray-400")}>
                             Yearly
                         </span>
                     </div>
@@ -233,13 +233,13 @@ export function PricingCards() {
                                 {/* Most Popular badge */}
                                 {plan.popular && (
                                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                                        <span className="bg-white text-[#1a237e] text-[10px] font-bold px-3 py-1 rounded-full shadow">
+                                        <span className="bg-white text-[#1a237e] text-[14px] font-bold px-3 py-1 rounded-full shadow">
                                             Most Popular
                                         </span>
                                     </div>
                                 )}
 
-                                <p className={cn("text-xs font-semibold mb-1", plan.popular ? "text-blue-200" : "text-gray-400")}>
+                                <p className={cn("text-[20px] font-jakarta mb-1", plan.popular ? "text-blue-200" : "text-gray-400")}>
                                     {plan.name}
                                 </p>
 
@@ -252,8 +252,8 @@ export function PricingCards() {
                                             exit={{ opacity: 0, y: -6 }}
                                             transition={{ duration: 0.25 }}
                                             className={cn(
-                                                "font-black leading-none",
-                                                plan.custom ? "text-3xl" : "text-4xl",
+                                                "font-jakarta text-[48px]",
+                                                plan.custom ? "text-[48px]" : "text-[48px]",
                                                 plan.popular ? "text-white" : "text-gray-900"
                                             )}
                                         >
@@ -265,11 +265,11 @@ export function PricingCards() {
                                     </span>
                                 </div>
 
-                                <p className={cn("text-xs mb-5 leading-snug", plan.popular ? "text-blue-100" : "text-gray-500")}>
+                                <p className={cn("text-[16px] mb-5 leading-snug", plan.popular ? "text-blue-100" : "text-gray-500")}>
                                     {plan.tagline}
                                 </p>
 
-                                <p className={cn("text-[11px] font-semibold mb-3 uppercase tracking-wide", plan.popular ? "text-blue-200" : "text-gray-400")}>
+                                <p className={cn("text-[14px] font-semibold mb-3 uppercase tracking-wide", plan.popular ? "text-blue-200" : "text-gray-400")}>
                                     What's included
                                 </p>
 
@@ -277,7 +277,7 @@ export function PricingCards() {
                                     {plan.features.map((f) => (
                                         <li key={f} className="flex items-start gap-2">
                                             <Check className={cn("h-3.5 w-3.5 mt-0.5 shrink-0", plan.popular ? "text-blue-200" : "text-[#1a237e]")} />
-                                            <span className={cn("text-xs leading-snug", plan.popular ? "text-blue-100" : "text-gray-600")}>
+                                            <span className={cn("text-[16px] leading-snug", plan.popular ? "text-blue-100" : "text-gray-600")}>
                                                 {f}
                                             </span>
                                         </li>

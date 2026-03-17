@@ -11,10 +11,10 @@ export function AboutHero() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="max-w-2xl mx-auto"
             >
-                <h1 className="font-jakarta text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-4">
+                <h1 className="font-jakarta text-[60px] text-gray-900 leading-tight tracking-tight mb-4">
                     <span className="text-[#1a237e]">About</span> Prolex.Ai
                 </h1>
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-[16px] text-gray-500 leading-relaxed">
                     Transforming legal practice management
                     <br />with AI-powered innovation.
                 </p>

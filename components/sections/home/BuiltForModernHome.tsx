@@ -13,7 +13,7 @@ const audiences = [
         image: soloPractitioner
     },
     {
-        title: "Law Firms & Corporations",
+        title: "Law Firms",
         description: "Manage internal compliance and documentation effortlessly with enterprise-grade tools.",
         image: lawFirms
     },
@@ -32,13 +32,13 @@ export function BuiltForModernHome() {
                 <ScrollReveal>
                     <div className="text-center mb-14">
                         <div className="inline-flex items-center bg-gray-100 border border-gray-200 rounded-full px-4 py-1.5 mb-5">
-                            <span className="text-xs text-gray-500 font-medium">Scale</span>
+                            <span className="text-xs text-gray-500 font-medium">Who all?</span>
                         </div>
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                             Built for modern
                             <br />legal practice
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-[16px] text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
                             Whether you're a solo practitioner or a large enterprise firm, Prolex.ai
                             adapts to your practice and workflow.
                         </p>
@@ -51,8 +51,8 @@ export function BuiltForModernHome() {
                             <div className="rounded-2xl border border-gray-100 bg-[#f7f7f8] overflow-hidden">
                                 <Image src={item.image} alt={item.title} width={500} height={500} />
                                 <div className="p-5">
-                                    <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
-                                    <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
+                                    <h3 className="font-jakarta text-[24px] text-gray-900 mb-1">{item.title}</h3>
+                                    <p className="text-[16px] text-gray-500 leading-relaxed">{item.description}</p>
                                 </div>
                             </div>
                         </ScrollReveal>

@@ -59,20 +59,20 @@ const features = [
 
 export function FeaturesGrid() {
     return (
-        <section className="bg-[#f7f7f8] py-20 px-6">
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section className="bg-[#f7f7f8] py-24 px-8">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                 {features.map((feature, i) => (
                     <ScrollReveal key={feature.number} delay={i * 0.08}>
-                        <div className="bg-white rounded-2xl p-8 min-h-[320px] flex flex-col border border-gray-100 shadow-sm">
+                        <div className="bg-white rounded-3xl p-12 min-h-[650px] flex flex-col border border-gray-100 shadow-sm">
                             {/* Number + Title */}
                             <div className="mb-4">
-                                <span className="text-xs text-gray-400 font-medium tracking-widest">
+                                <span className="text-[20px] font-jakarta text-black tracking-widest">
                                     {feature.number}
                                 </span>
-                                <h3 className="text-lg font-bold text-gray-900 mt-1">
+                                <h3 className="text-[32px] font-jakarta text-gray-900 mt-1">
                                     {feature.title}
                                 </h3>
-                                <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                                <p className="text-[16px] text-gray-500 mt-2 leading-relaxed">
                                     {feature.description}
                                 </p>
                             </div>

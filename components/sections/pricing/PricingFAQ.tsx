@@ -79,12 +79,12 @@ export function PricingFAQ() {
                         <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-5 shadow-sm">
                             <span className="text-xs text-gray-500 font-medium">FAQs</span>
                         </div>
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                             Common questions
                             <br />
                             with Clear answers
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-[20px] font-jakarta text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
                             Here are answers to the most common things people ask before getting started.
                         </p>
                     </div>

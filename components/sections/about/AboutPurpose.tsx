@@ -3,6 +3,11 @@
 import { m } from "framer-motion"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 
+import contract from "@/public/about/conn.webp"
+import transmit from "@/public/about/trans.avif"
+import efficiency from "@/public/about/eff.webp"
+import Image from "next/image"
+
 const cards = [
     {
         title: "AI + Legal",
@@ -11,6 +16,7 @@ const cards = [
         tag: "Justice · Efficiency · Impact",
         tagColor: "text-[#1a237e]",
         bg: "bg-indigo-50",
+        image: contract
     },
     {
         title: "The Value We Deliver",
@@ -19,6 +25,7 @@ const cards = [
         tag: "Lawyer-first design",
         tagColor: "text-orange-500",
         bg: "bg-orange-50",
+        image: transmit
     },
     {
         title: "Legal AI Chat",
@@ -27,19 +34,12 @@ const cards = [
         tag: "Context-grounded AI",
         tagColor: "text-emerald-600",
         bg: "bg-emerald-50",
-    },
-    {
-        title: "Efficient Without Compromise",
-        description:
-            "Reduce repetitive tasks and streamline billing with automated time tracking and matter-based invoicing.",
-        tag: "Court-ready workflows",
-        tagColor: "text-violet-600",
-        bg: "bg-violet-50",
+        image: efficiency
     },
 ]
 
 // Triple the cards to ensure we cover wide screens for the seamless loop
-const allCards = [...cards, ...cards, ...cards, ...cards]
+const allCards = [...cards, ...cards, ...cards]
 
 function InfiniteTrack() {
     return (
@@ -50,13 +50,14 @@ function InfiniteTrack() {
 
             {/* Scrolling track */}
             <m.div
+                key="infinite-scroll-80"
                 className="flex gap-5 w-max py-4"
                 animate={{ x: ["0%", "-50%"] }}
                 transition={{
                     x: {
                         repeat: Infinity,
                         repeatType: "loop",
-                        duration: 30,
+                        duration: 80,
                         ease: "linear",
                     },
                 }}
@@ -67,18 +68,25 @@ function InfiniteTrack() {
                         className="w-[850px] shrink-0 bg-white rounded-[32px] border border-gray-100 shadow-sm p-10 hover:shadow-md transition-shadow flex items-center gap-10"
                     >
                         <div className="flex-1 text-left">
-                            <h3 className="text-[32px] font-black text-gray-900 leading-tight mb-4">
+                            <h3 className="text-[32px] font-jakarta text-gray-900 leading-tight mb-4">
                                 {card.title}
                             </h3>
-                            <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                            <p className="text-[16px] text-gray-500 leading-relaxed mb-6">
                                 {card.description}
                             </p>
 
                         </div>
 
                         {/* Illustration placeholder */}
-                        <div className={`w-[372px] h-[314px] shrink-0 rounded-2xl ${card.bg} flex items-center justify-center`}>
-                            <span className="text-xs text-gray-300">Illustration (372x314)</span>
+                        <div className={`w-[372px] h-[314px] shrink-0 rounded-2xl flex items-center justify-center overflow-hidden`}>
+                            <Image
+                                src={card.image}
+                                alt={card.title}
+                                width={372}
+                                height={314}
+                                className="object-cover w-full h-full rounded-2xl"
+                                quality={100}
+                            />
                         </div>
                     </div>
                 ))}
@@ -95,11 +103,11 @@ export function AboutPurpose() {
                     <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-5 shadow-sm">
                         <span className="text-xs text-gray-500 font-medium">Purpose</span>
                     </div>
-                    <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                    <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                         Why We
                         <br />Built Prolex.ai
                     </h2>
-                    <p className="text-sm text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
+                    <p className="text-[16px] text-gray-500 mt-4 max-w-xs mx-auto leading-relaxed">
                         Prolex.ai was founded with a singular vision: to revolutionize how legal professionals
                         manage their practice through the power of artificial intelligence.
                     </p>

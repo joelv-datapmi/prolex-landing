@@ -15,7 +15,7 @@ import PrecedentFinder from "@/public/home/precedent-finder.avif"
 const features = [
     {
         title: "Case Intelligence",
-        description: "Structured case management with timelines, parties, documents, and tasks all connected.",
+        description: "Manage every legal document with version control, structured metadata, and AI-powered drafting support.",
         image: caseintelligence,
     },
     {
@@ -25,22 +25,22 @@ const features = [
     },
     {
         title: "Smart Hearings & Reminders",
-        description: "Never miss a court date. Automated alerts and calendar sync for every deadline.",
+        description: "Never miss a court date. Automated reminders, structured hearing tracking, and deadline-based nudges.",
         image: smartHearings,
     },
     {
         title: "AI Drafting & Documents",
-        description: "Context-aware AI that drafts motions, contracts, and summaries in seconds.",
+        description: "Human-guided AI drafting grounded in case context — with full control, review, and governance.",
         image: aiDrafting,
     },
     {
-        title: "Client Onboarding",
-        description: "Streamlined intake forms, KYC, and client portal — all in one place.",
+        title: "Client Communication",
+        description: "Streamline client updates with AI-assisted, case summaries, and organized communication.",
         image: clientOnboarding,
     },
     {
-        title: "Proceeding Builder",
-        description: "Build structured court proceedings with templates and compliance checklists.",
+        title: "Precedent Finder",
+        description: "Find relevant precedents faster with our Prolex.Ai legal search that connects past cases to your current matter.",
         image: PrecedentFinder,
     },
 ]
@@ -53,14 +53,14 @@ export function PlatformFeatures() {
                 <ScrollReveal>
                     <div className="text-center mb-14">
                         <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-5 shadow-sm">
-                            <span className="text-xs text-gray-500 font-medium">Made Simple</span>
+                            <span className="text-xs text-gray-500 font-medium">Unique Features</span>
                         </div>
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="text-[48px] font-jakarta font-medium text-gray-900 leading-tight">
                             Make your platform
                             <br />work harder for you
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-sm mx-auto leading-relaxed">
-                            Every module is designed to reduce friction and increase productivity across your firm.
+                        <p className="text-[16px] text-gray-500 mt-4 max-w-sm mx-auto leading-relaxed">
+                            Streamline your business with unified metrics and AI-powered analytics—all in one place.
                         </p>
                     </div>
                 </ScrollReveal>
@@ -72,8 +72,8 @@ export function PlatformFeatures() {
                                 {/* Illustration placeholder — purple-tinted like screenshot */}
                                 <Image src={f.image} alt={f.title} width={500} height={500} />
                                 <div className="p-5">
-                                    <h3 className="font-bold text-gray-900 text-sm mb-1">{f.title}</h3>
-                                    <p className="text-xs text-gray-500 leading-relaxed">{f.description}</p>
+                                    <h3 className="text-[24px] font-jakarta font-medium text-gray-900 mb-1">{f.title}</h3>
+                                    <p className="text-[16px] text-gray-500 leading-relaxed">{f.description}</p>
                                 </div>
                             </div>
                         </ScrollReveal>

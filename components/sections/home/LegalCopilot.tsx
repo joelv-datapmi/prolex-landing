@@ -19,12 +19,12 @@ export function LegalCopilot() {
                 <ScrollReveal>
                     <div className="text-center mb-14">
                         <div className="inline-flex items-center bg-white border border-gray-200 rounded-full px-4 py-1.5 mb-5 shadow-sm">
-                            <span className="text-xs text-gray-500 font-medium">Attorney Tool Builder</span>
+                            <span className="text-xs text-gray-500 font-medium">Introducing Prolex Copilot</span>
                         </div>
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="text-[48px] font-jakarta text-gray-900 leading-tight">
                             Your Legal Copilot
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-sm mx-auto leading-relaxed">
+                        <p className="text-[16px] text-gray-500 mt-4 max-w-sm mx-auto leading-relaxed">
                             Prolex AI is built alongside attorneys to support — never replace — legal judgment.
                             It understands context, respects access controls, and always keeps the lawyer in control.
                         </p>
@@ -33,13 +33,13 @@ export function LegalCopilot() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     {copilotFeatures.map((f, i) => (
-                        <ScrollReveal key={f.title} delay={i * 0.07}>
-                            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-                                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+                        <ScrollReveal key={f.title} delay={i * 0.07} className="h-full">
+                            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 h-full flex flex-col">
+                                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center mb-4 shrink-0">
                                     <div className="w-3 h-3 rounded-sm bg-[#1a237e]" />
                                 </div>
-                                <h3 className="font-bold text-gray-900 text-sm mb-2">{f.title}</h3>
-                                <p className="text-xs text-gray-500 leading-relaxed">{f.description}</p>
+                                <h3 className="font-jakarta text-[20px] text-gray-900 mb-2">{f.title}</h3>
+                                <p className="text-[16px] text-gray-500 leading-relaxed flex-1">{f.description}</p>
                             </div>
                         </ScrollReveal>
                     ))}

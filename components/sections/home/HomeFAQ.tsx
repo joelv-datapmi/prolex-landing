@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils"
 
 const faqs = [
     { question: "Can I switch plans later?", answer: "Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any differences in pricing." },
-    { question: "Is my data secure?", answer: "All data is encrypted at rest and in transit. We follow industry-standard security practices and are compliant with applicable data protection regulations." },
+    { question: "Is my data secure?", answer: "Absolutely. We use bank-grade encryption and comply with all major security standards. Your client data is protected with enterprise-level security measures." },
     { question: "What happens after my trial ends?", answer: "After your 14-day free trial, you'll be prompted to choose a paid plan. Your data is retained for 30 days if you choose not to upgrade." },
-    { question: "Does Prolex AI have AI features?", answer: "Yes. Prolex includes AI-powered document drafting, clause suggestions, case summarisation, and smart deadline recommendations on Premium and above." },
+    { question: "Does Prolex AI have AI features?", answer: "Absolutely. We have variety of AI features." },
 ]
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
@@ -18,7 +18,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     return (
         <div className={cn("border border-gray-200 rounded-xl overflow-hidden", open ? "bg-white" : "bg-white hover:bg-gray-50")}>
             <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between px-6 py-4 text-left">
-                <span className="text-sm font-medium text-gray-900">{question}</span>
+                <span className="font-jakarta text-[18px] font-medium text-gray-900">{question}</span>
                 {open ? <Minus className="h-4 w-4 text-gray-400 shrink-0" /> : <Plus className="h-4 w-4 text-gray-400 shrink-0" />}
             </button>
             <AnimatePresence initial={false}>
@@ -30,7 +30,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                     >
-                        <p className="px-6 pb-5 text-sm text-gray-500 leading-relaxed">{answer}</p>
+                        <p className="px-6 pb-5 text-[16px] text-gray-500 leading-relaxed">{answer}</p>
                     </m.div>
                 )}
             </AnimatePresence>
@@ -44,11 +44,11 @@ export function HomeFAQ() {
             <div className="max-w-2xl mx-auto">
                 <ScrollReveal>
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-black text-gray-900 leading-tight">
+                        <h2 className="font-jakarta text-[48px] text-gray-900 leading-tight">
                             Common questions
                             <br />with Clear answers
                         </h2>
-                        <p className="text-sm text-gray-500 mt-4 max-w-xs mx-auto">
+                        <p className="text-[16px] text-gray-500 mt-4 max-w-xs mx-auto">
                             Here are answers to the most common things people ask before getting started.
                         </p>
                     </div>
