@@ -28,31 +28,31 @@ function FloatingCard({
 
 export function HeroSection() {
     return (
-        <section className="relative min-h-[calc(100vh-4rem)] bg-[#f0f0f0] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[80vh] bg-[#f0f0f0] flex flex-col items-center pt-24 justify-start overflow-hidden">
 
             {/* Floating cards */}
-            <FloatingCard className="w-16 h-16 left-[10%] top-[20%]" delay={0.2}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <FloatingCard className="w-20 h-20 left-[26%] top-[20%]" delay={0.2}>
+                <svg width="36" height="36" viewBox="0 0 28 28" fill="none">
                     <path d="M14 2C14 2 15.5 10 20 13C15.5 16 14 24 14 24C14 24 12.5 16 8 13C12.5 10 14 2 14 2Z" fill="#1a237e" />
                     <path d="M22 5C22 5 22.6 9 25 11C22.6 13 22 17 22 17C22 17 21.4 13 19 11C21.4 9 22 5 22 5Z" fill="#1a237e" opacity="0.4" />
                 </svg>
             </FloatingCard>
-            <FloatingCard className="w-16 h-16 left-[7%] bottom-[25%]" delay={0.5}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1a237e" strokeWidth="1.8">
+            <FloatingCard className="w-20 h-20 left-[24%] top-[56%]" delay={0.5}>
+                <svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#1a237e" strokeWidth="2">
                     <rect x="4" y="10" width="20" height="14" rx="2" />
                     <path d="M10 10V8a4 4 0 018 0v2" />
                     <path d="M4 16h20" />
                 </svg>
             </FloatingCard>
-            <FloatingCard className="w-16 h-16 right-[10%] top-[20%]" delay={0.3}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1a237e" strokeWidth="1.8">
+            <FloatingCard className="w-20 h-20 right-[26%] top-[20%]" delay={0.3}>
+                <svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#1a237e" strokeWidth="2">
                     <circle cx="14" cy="8" r="4" />
                     <path d="M6 22c0-4.418 3.582-8 8-8s8 3.582 8 8" />
                     <path d="M4 22h20" />
                 </svg>
             </FloatingCard>
-            <FloatingCard className="w-16 h-16 right-[7%] bottom-[25%]" delay={0.6}>
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#1a237e" strokeWidth="1.8">
+            <FloatingCard className="w-20 h-20 right-[24%] top-[56%]" delay={0.6}>
+                <svg width="36" height="36" viewBox="0 0 28 28" fill="none" stroke="#1a237e" strokeWidth="2">
                     <path d="M6 22L20 8" strokeLinecap="round" />
                     <rect x="15" y="3" width="9" height="6" rx="1.5" transform="rotate(45 15 3)" />
                     <rect x="3" y="18" width="7" height="5" rx="1.5" transform="rotate(45 3 18)" />

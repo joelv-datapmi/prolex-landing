@@ -5,6 +5,9 @@ import { m, useInView, useMotionValue, useSpring, animate } from "framer-motion"
 import { useEffect } from "react"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 
+import solutionsBanner from "@/public/solutions/solutions-banner.avif"
+import Image from "next/image"
+
 // Count-up hook
 function useCountUp(target: number, decimals = 0, duration = 2) {
     const ref = useRef<HTMLSpanElement>(null)
@@ -79,13 +82,24 @@ export function OperationalIntelligence() {
                     </ScrollReveal>
                 </div>
 
-                {/* Image placeholder */}
+                {/* Banner Image */}
                 <ScrollReveal delay={0.15}>
-                    <div className="w-full h-72 rounded-2xl bg-gray-200 border border-dashed border-gray-300 flex items-center justify-center mb-14 overflow-hidden">
-                        <span className="text-sm text-gray-400">
-                            Team / Office Photo — replace with &lt;Image&gt;
-                        </span>
-                    </div>
+                    <m.div
+                        initial={{ scale: 0.85, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        viewport={{ once: true, margin: "-10%" }}
+                        className="w-full max-w-[1008px] mx-auto mb-14 rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-white flex justify-center"
+                    >
+                        <Image 
+                            src={solutionsBanner} 
+                            alt="Operational Intelligence Banner" 
+                            className="w-full h-auto object-cover max-h-[385px]"
+                            width={1008}
+                            height={385}
+                            quality={100} 
+                        />
+                    </m.div>
                 </ScrollReveal>
 
                 {/* Stats row with count-up */}

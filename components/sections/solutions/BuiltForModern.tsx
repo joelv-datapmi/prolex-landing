@@ -2,21 +2,29 @@
 
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 
+import soloPraction from "@/public/solutions/solo-pract.webp";
+import lawFirms from "@/public/solutions/law-firm.avif";
+import enterpriseFirms from "@/public/solutions/enter-prise.avif";
+import Image from "next/image";
+
 const audiences = [
     {
         title: "Solo Practitioner",
         description:
             "Simply your entire practice in one tool. Manage cases, clients and billing without the complexity.",
+        image: soloPraction
     },
     {
-        title: "Law Firms & Corporations",
+        title: "Law Firms",
         description:
             "Manage internal compliance and documentation effortlessly with enterprise-grade tools.",
+        image: lawFirms
     },
     {
         title: "Enter Prise Firms",
         description:
             "Scale operations with role-based dashboards and AI insights for large organisations.",
+        image: enterpriseFirms
     },
 ]
 
@@ -47,14 +55,21 @@ export function BuiltForModern() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {audiences.map((item, i) => (
                         <ScrollReveal key={item.title} delay={i * 0.1}>
-                            <div className="rounded-2xl border border-gray-100 bg-[#f7f7f8] overflow-hidden">
-                                {/* Image placeholder */}
-                                <div className="h-44 bg-gray-200 border-b border-dashed border-gray-300 flex items-center justify-center">
-                                    <span className="text-xs text-gray-400">{item.title} photo</span>
+                            <div className="rounded-2xl border border-gray-100 bg-[#f7f7f8] overflow-hidden flex flex-col">
+                                <div className="p-6 text-center flex-1">
+                                    <h3 className="font-bold text-gray-900 text-[24px] mb-2 leading-tight">{item.title}</h3>
+                                    <p className="text-sm text-gray-500 leading-relaxed">{item.description}</p>
                                 </div>
-                                <div className="p-5">
-                                    <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
-                                    <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
+
+                                <div className="flex justify-center px-4 pb-4">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        width={354}
+                                        height={228}
+                                        className="object-cover w-[354px] h-[228px] rounded-xl shadow-sm"
+                                        quality={100}
+                                    />
                                 </div>
                             </div>
                         </ScrollReveal>

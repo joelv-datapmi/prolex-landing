@@ -2,22 +2,30 @@
 
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 
+import litigationReady from "@/public/solutions/litigation-ready.avif";
+import contractLifecycle from "@/public/solutions/contract-lifecycle.avif";
+import fromTemplate from "@/public/solutions/template-selection.avif"
+import Image from "next/image";
+
 const workflowCards = [
     {
         title: "Litigation-Ready Structure",
         description:
             "Built for court-driven practice with structured filing, hearings, and deadline tracking.",
+        image: litigationReady,
     },
     {
         title: "Contract Lifecycle Management",
         description:
             "From template selection to clause refinement and structured approval, Prolex simplifies contract workflows.",
+        image: contractLifecycle,
     },
     {
         title: "From Template Selection To Clause Refinement And Structured Approval, Prolex Simplifies Contract Workflows.",
         description:
             "Track activity, deadlines, AI usage, billing, and team productivity — all in one dashboard.",
         isWide: true,
+        image: fromTemplate,
     },
 ]
 
@@ -54,12 +62,14 @@ export function WorkflowCards() {
                                         {card.description}
                                     </p>
 
-                                    {/* Illustration placeholder */}
-                                    <div className="h-36 rounded-xl bg-gray-50 border border-dashed border-gray-200 flex items-center justify-center">
-                                        <span className="text-xs text-gray-300">
-                                            Illustration — {card.title.split(" ").slice(0, 3).join(" ")}
-                                        </span>
-                                    </div>
+                                    <Image
+                                        src={card.image}
+                                        alt={card.title}
+                                        width={400}
+                                        height={232}
+                                        className="object-cover w-[400px] h-[232px] rounded-xl shadow-sm"
+                                        quality={100}
+                                    />
                                 </div>
                             </ScrollReveal>
                         ))}

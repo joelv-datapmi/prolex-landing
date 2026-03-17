@@ -1,19 +1,26 @@
 "use client"
 
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
+import soloPractitioner from "@/public/home/solo-practitioner.avif"
+import lawFirms from "@/public/home/law-firms.avif"
+import enterpriseFirms from "@/public/home/enterprise-firms.avif"
+import Image from "next/image"
 
 const audiences = [
     {
         title: "Solo Practitioner",
         description: "Simplify your entire practice in one tool. Manage cases, clients and billing without the complexity.",
+        image: soloPractitioner
     },
     {
         title: "Law Firms & Corporations",
         description: "Manage internal compliance and documentation effortlessly with enterprise-grade tools.",
+        image: lawFirms
     },
     {
         title: "Enterprise Firms",
         description: "Scale operations with role-based dashboards and AI insights for large organisations.",
+        image: enterpriseFirms
     },
 ]
 
@@ -42,9 +49,7 @@ export function BuiltForModernHome() {
                     {audiences.map((item, i) => (
                         <ScrollReveal key={item.title} delay={i * 0.1}>
                             <div className="rounded-2xl border border-gray-100 bg-[#f7f7f8] overflow-hidden">
-                                <div className="h-48 bg-gray-200 flex items-center justify-center border-b border-dashed border-gray-300">
-                                    <span className="text-xs text-gray-400">{item.title} — photo</span>
-                                </div>
+                                <Image src={item.image} alt={item.title} width={500} height={500} />
                                 <div className="p-5">
                                     <h3 className="font-bold text-gray-900 text-sm mb-1">{item.title}</h3>
                                     <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>

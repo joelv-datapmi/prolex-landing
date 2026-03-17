@@ -34,6 +34,15 @@ export default function RootLayout({
           href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
           rel="stylesheet"
         />
+
+        {/* Plus Jakarta Sans */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

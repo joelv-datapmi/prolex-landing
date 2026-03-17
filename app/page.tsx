@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
-      <DashboardPreview />
+      {/* <DashboardPreview /> */}
       <PlatformFeatures />
       <BuiltForModernHome />
       <LegalCopilot />

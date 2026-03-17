@@ -9,7 +9,7 @@ export function FeaturesCTA() {
     return (
         <section className="px-6 py-16 bg-[#f7f7f8]">
             <ScrollReveal>
-                <div className="max-w-5xl mx-auto bg-[#1a237e] rounded-2xl px-10 py-16 text-center relative overflow-hidden">
+                <div className=" mx-auto bg-[#1a237e] rounded-2xl px-10 py-16 text-center relative overflow-hidden">
 
                     {/* Subtle background pattern */}
                     <div
