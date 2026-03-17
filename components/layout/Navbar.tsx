@@ -117,7 +117,7 @@ export function Navbar() {
                                 <Menu className="h-5 w-5" />
                             </Button>
                         </DrawerTrigger>
-                        <DrawerContent className="rounded-b-3xl border-none shadow-xl">
+                        <DrawerContent className="rounded-b-3xl border-none shadow-xl bg-white text-gray-900">
                             <DrawerTitle className="sr-only">Menu</DrawerTitle>
                             <DrawerDescription className="sr-only">Navigation links and actions</DrawerDescription>
                             <div className="px-6 pt-4 pb-10">
