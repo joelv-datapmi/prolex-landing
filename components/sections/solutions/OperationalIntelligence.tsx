@@ -44,14 +44,15 @@ function StatItem({ value, decimals, suffix, label }: typeof stats[0]) {
 
     return (
         <div ref={inViewRef} className="text-center">
-            <div className="text-[61px] font-jakarta text-gray-900 flex items-end justify-center gap-0.5">
+            <div className="text-[36px] sm:text-[48px] md:text-[61px] font-jakarta text-gray-900 flex items-end justify-center gap-0.5 leading-none">
                 <span ref={ref}>0</span>
                 <span>{suffix}</span>
             </div>
-            <p className="text-[16px] text-gray-400 mt-1 max-w-[100px] mx-auto leading-snug">
+            <p className="text-[14px] sm:text-[16px] text-gray-400 mt-2 max-w-[140px] mx-auto leading-snug font-medium">
                 {label}
             </p>
         </div>
+
     )
 }
 
@@ -63,12 +64,12 @@ export function OperationalIntelligence() {
                 {/* Top text + image layout */}
                 <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
                     <ScrollReveal>
-                        <h2 className="font-jakarta text-[48px] text-gray-900 leading-tight">
+                        <h2 className="font-jakarta text-[32px] sm:text-[40px] md:text-[48px] text-gray-900 leading-tight">
                             Operational Intelligence
-                            <br />
-                            for Modern Law Firms
+                            <br className="hidden sm:block" /> for Modern Law Firms
                         </h2>
                     </ScrollReveal>
+
 
                     <ScrollReveal delay={0.1}>
                         <p className="text-[16px] text-gray-500 leading-relaxed">
@@ -103,13 +104,14 @@ export function OperationalIntelligence() {
                 </ScrollReveal>
 
                 {/* Stats row with count-up */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-8">
                     {stats.map((stat, i) => (
                         <ScrollReveal key={stat.label} delay={i * 0.08}>
                             <StatItem {...stat} />
                         </ScrollReveal>
                     ))}
                 </div>
+
 
             </div>
         </section>

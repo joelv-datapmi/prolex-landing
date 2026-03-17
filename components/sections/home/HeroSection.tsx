@@ -23,9 +23,10 @@ function FloatingCard({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay, ease: [0.16, 1, 0.3, 1] }}
-            className={`absolute bg-white rounded-2xl shadow-md p-4 flex items-center justify-center ${className}`}
+            className={`hidden min-[1000px]:flex absolute bg-white rounded-2xl shadow-md p-4 items-center justify-center ${className}`}
             style={{ animation: `heroFloat ${3 + delay}s ease-in-out infinite`, animationDelay: `${delay}s` }}
         >
+
             {children}
         </m.div>
     )
@@ -43,7 +44,7 @@ export function HeroSection() {
     const opacity = useTransform(scrollYProgress, [0, 0.1], [0.8, 1])
 
     return (
-        <section ref={containerRef} className="relative min-h-screen bg-[#f0f0f0] flex flex-col items-center pt-24 justify-start overflow-visible pb-20">
+        <section ref={containerRef} className="relative min-h-screen bg-[#f0f0f0] flex flex-col items-center pt-24 justify-start overflow-x-hidden pb-20">
 
             {/* Floating cards */}
             <FloatingCard className="w-20 h-20 left-[26%] top-[8%] z-20" delay={0.2}>
@@ -107,12 +108,13 @@ export function HeroSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-[60px] font-jakarta font-medium text-gray-900 leading-[1.1] tracking-tight mb-5"
+                    className="text-[36px] sm:text-[48px] md:text-[60px] font-jakarta font-medium text-gray-900 leading-[1.1] tracking-tight mb-5"
                 >
                     The Future Of Legal
-                    <br />Practice Management
-                    <br />Powered By AI
+                    <br className="hidden sm:block" /> Practice Management
+                    <br /> Powered By AI
                 </m.h1>
+
 
                 <m.p
                     initial={{ opacity: 0, y: 20 }}

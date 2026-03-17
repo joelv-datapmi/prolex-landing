@@ -54,7 +54,10 @@ export function RequestDemoDialog({ open, onOpenChange }: RequestDemoDialogProps
         }}>
 
             <DialogContent className="sm:max-w-[480px] p-0 overflow-hidden border-none shadow-2xl">
+                <DialogTitle className="sr-only">Request a Demo</DialogTitle>
+                <DialogDescription className="sr-only">Fill out this form to request a personalized demonstration of Prolex.AI.</DialogDescription>
                 <AnimatePresence mode="wait">
+
                     {!isSubmitted ? (
                         <m.div
                             key="form"

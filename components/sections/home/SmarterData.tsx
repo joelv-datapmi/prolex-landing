@@ -102,14 +102,14 @@ export function SmarterData() {
                 </ScrollReveal>
 
                 {/* Stats row */}
-                <div className="grid grid-cols-3 gap-6 max-w-xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 max-w-xl mx-auto">
                     {stats.map((s, i) => (
                         <ScrollReveal key={s.label} delay={i * 0.1}>
                             <div className="text-center">
-                                <div className="text-[64px] font-jakarta text-gray-900">
+                                <div className="text-[40px] sm:text-[48px] md:text-[64px] font-jakarta text-gray-900 leading-none mb-2">
                                     <CountUp target={s.target} suffix={s.suffix} decimals={s.decimals} />
                                 </div>
-                                <p className="text-[16px] text-gray-400">{s.label}</p>
+                                <p className="text-[14px] sm:text-[16px] text-gray-400 font-medium">{s.label}</p>
                             </div>
                         </ScrollReveal>
                     ))}

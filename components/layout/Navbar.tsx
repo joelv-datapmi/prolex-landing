@@ -8,9 +8,10 @@ import { m } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { RequestDemoButton } from "@/components/shared/RequestDemoButton"
+import { Drawer, DrawerContent, DrawerTrigger, DrawerTitle, DrawerDescription } from "@/components/ui/drawer"
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
+
 
 
 
@@ -110,58 +111,65 @@ export function Navbar() {
 
                 {/* MOBILE — Hamburger */}
                 <div className="md:hidden flex justify-end col-span-2">
-                    <Sheet open={open} onOpenChange={setOpen}>
-                        <SheetTrigger asChild>
+                    <Drawer open={open} onOpenChange={setOpen} direction="top">
+                        <DrawerTrigger asChild>
                             <Button variant="ghost" size="icon">
                                 <Menu className="h-5 w-5" />
                             </Button>
-                        </SheetTrigger>
-                        <SheetContent side="right" className="w-72">
-                            <div className="mb-8 mt-2">
-                                <Image
-                                    src="/logo/logo-letter.avif"
-                                    alt="Prolex.AI"
-                                    width={120}
-                                    height={28}
-                                    className="h-7 w-auto object-contain"
-                                />
-                            </div>
+                        </DrawerTrigger>
+                        <DrawerContent className="rounded-b-3xl border-none shadow-xl">
+                            <DrawerTitle className="sr-only">Menu</DrawerTitle>
+                            <DrawerDescription className="sr-only">Navigation links and actions</DrawerDescription>
+                            <div className="px-6 pt-4 pb-10">
 
-                            <nav className="flex flex-col gap-1">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
+                                <div className="flex items-center justify-between mb-8">
+                                    <Image
+                                        src="/logo/logo-letter.avif"
+                                        alt="Prolex.AI"
+                                        width={120}
+                                        height={28}
+                                        className="h-7 w-auto object-contain"
+                                    />
+                                    <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
+                                        <X className="h-5 w-5" />
+                                    </Button>
+                                </div>
+
+                                <nav className="flex flex-col gap-1">
+                                    {navLinks.map((link) => (
+                                        <Link
+                                            key={link.href}
+                                            href={link.href}
+                                            onClick={() => setOpen(false)}
+                                            className={cn(
+                                                "px-4 py-4 rounded-xl text-[18px] transition-colors",
+                                                pathname === link.href
+                                                    ? "bg-blue-50 text-[#1a237e] font-semibold"
+                                                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                                            )}
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    ))}
+                                </nav>
+
+                                <div className="border-t mt-6 pt-6 flex flex-col gap-3">
+                                    <Button variant="ghost" className="h-12 text-[16px] rounded-xl" asChild>
+                                        <a href="https://app.prolex.ai/login" onClick={() => setOpen(false)}>
+                                            Sign In
+                                        </a>
+                                    </Button>
+
+                                    <RequestDemoButton
+                                        className="bg-[#1a237e] hover:bg-[#151c6b] text-white h-12 rounded-xl text-[16px] font-semibold"
                                         onClick={() => setOpen(false)}
-                                        className={cn(
-                                            "px-4 py-3 rounded-md text-[16px] transition-colors",
-                                            pathname === link.href
-                                                ? "bg-blue-50 text-[#1a237e] font-medium"
-                                                : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
-                                        )}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                ))}
-                            </nav>
-
-                            <div className="border-t mt-4 pt-4 flex flex-col gap-2">
-                                <Button variant="ghost" asChild>
-                                    <a href="https://app.prolex.ai/login" onClick={() => setOpen(false)}>
-                                        Sign In
-                                    </a>
-                                </Button>
-
-                                <RequestDemoButton
-                                    className="bg-[#1a237e] hover:bg-[#151c6b] text-white"
-                                    onClick={() => setOpen(false)}
-                                />
-
-
+                                    />
+                                </div>
                             </div>
-                        </SheetContent>
-                    </Sheet>
+                        </DrawerContent>
+                    </Drawer>
                 </div>
+
 
             </div>
         </m.header>

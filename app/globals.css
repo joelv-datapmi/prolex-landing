@@ -151,11 +151,14 @@
     font-weight: 500;
     font-size: 16px;
     color: #575757CC;
+    overflow-x: hidden;
   }
 
   html {
     @apply font-sans;
     font-weight: 500;
     font-size: 16px;
+    overflow-x: hidden;
   }
+
 }

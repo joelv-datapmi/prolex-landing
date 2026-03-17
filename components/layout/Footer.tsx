@@ -1,4 +1,6 @@
 import Link from "next/link"
+import { RequestDemoButton } from "@/components/shared/RequestDemoButton"
+
 
 const footerLinks = {
     Pages: [
@@ -41,14 +43,14 @@ export function Footer() {
                             AI-powered legal case management for modern law firms.
                         </p>
 
-                        <Link
-                            href="/demo"
+                        <RequestDemoButton
                             className="mt-2 inline-flex items-center justify-center px-6 py-2.5 rounded-md
                          bg-[#1a237e] hover:bg-[#151c6b] text-white text-sm font-medium
                          transition-colors duration-200"
                         >
                             Request a Demo
-                        </Link>
+                        </RequestDemoButton>
+
                     </div>
 
                     {/* RIGHT — Link columns */}
